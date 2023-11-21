@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Homework 1</title>
+  </head>
+  <body>
+    <script>
+      // Створити змінні. Присвоїти кожному з них
+      // значення: 'hello','owu','com', 'ua', 1, 10, -999, 123, 3.14, 2.7, 16, true, false.
+      // Вивести кожну змінну за допомогою: console.log
+      console.log("Задание 1 -----");
+      let hello = "hello";
+      console.log(hello);
+      let owu = "owu";
+      console.log(owu);
+      let com = "com";
+      console.log(com);
+      let ua = "ua";
+      console.log(ua);
+      let number1 = 1;
+      console.log(number1);
+      let number10 = 10;
+      console.log(number10);
+      let number9 = -999;
+      console.log(number9);
+      let number2 = 123;
+      console.log(number2);
+      let pi = 3.14;
+      console.log(pi);
+      let exp = 2.7;
+      console.log(exp);
+      let passport = 16;
+      console.log(passport);
+      let boolTrue = true;
+      console.log(boolTrue);
+      let boolFalse = false;
+      console.log(boolFalse);
+
+      console.log("Задание 2 -----");
+      // Створити 3 змінних firstName, middleName, lastName,
+      // наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
+      let firstName = "Сопун";
+      let middleName = "Юрій";
+      let lastName = "Валентинович";
+      let space = " ";
+      console.log("Варіант 1");
+      console.log(firstName + space + middleName + space + lastName);
+      console.log("Варіант 2");
+      console.log(`${firstName} ${middleName} ${lastName}`);
+
+      console.log("Задание 3 -----");
+      // За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+      // let a = 100; let b = '100'; let c = true;
+      let a = 100;
+      let b = "100";
+      let c = true;
+      console.log("a = " + typeof a);
+      console.log("b = " + typeof b);
+      console.log("c = " + typeof c);
+
+      console.log("Задание 4 -----");
+      //       Додаткове для тих хто цікавився prompt`oм
+      // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
+      prompt("Прізвище ? ", firstName);
+      prompt("Ім'я ? ", middleName);
+      prompt("по-батькові ? ", lastName);
+      console.log(`${firstName} ${middleName} ${lastName}`);
+      alert(firstName + space + middleName + space + lastName);
+    </script>
+  </body>
+</html>
