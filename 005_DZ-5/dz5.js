@@ -61,7 +61,7 @@ ul_li(text);
 
 let ul_li_params = (text, params) => {
     document.write(`<ul>`);
-    for(i=1; i<=params; i++) {
+    for(let i=1; i<=params; i++) {
         document.write(`<li>${text}</li>`);
     }
     document.write(`</ul>`);
