@@ -2,6 +2,76 @@ let stringHello = "hello world";
 let stringLorem = "lorem ipsum";
 let stringJsCool = "javascript is cool";
 
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
+
 // - Знайти та вивести довижину настипних стрінгових значень
 //     'hello world', 'lorem ipsum', 'javascript is cool'
 console.log ("#1 - Знайти та вивести довижину настипних стрінгових значень");
@@ -135,7 +205,7 @@ console.log ("");
 //     value: '', // '6'-'10', 'ace','jack','queen','king','joker'
 //     color:'', // 'red','black'
 // }
-
+console.log (`#8 - карти `);
 let cards = [
     { cardSuit: 'spade', value: "6", color: 'black'}, //пика
     { cardSuit: 'spade', value: "7", color: 'black'},
@@ -207,25 +277,16 @@ console.log ("");
 //     hearts:[],
 //     clubs:[]
 // }
-
-console.log (`упакувати всі карти по "мастях" в об'єкт`);
+console.log (`#9 - упакувати всі карти по "мастях" в об'єкт`);
 
 let reduce = cards.reduce((finish, card) => {
     switch (card.cardSuit) {
-      case 'clubs': finish.clubs.push[card]; console.log ('clubs');
-      break;
-
-        case 'spade': finish.spades.push[card]; console.log ('spade');
-        break;
-
-        case "heart": finish.hearts.push[card]; console.log ('heart');
-        break;
-
-        case 'diamond': finish.diamonds.push[card]; console.log ('diamond');
-        break; 
-
-        default:
-        break;
+        case 'clubs': finish.clubs.push(card);  break;
+        case 'spade': finish.spades.push(card); break;
+        case "heart": finish.hearts.push(card); break;
+        case 'diamond': finish.diamonds.push(card); break; 
+    default:
+    break;
     }
 
     return finish;
@@ -240,3 +301,23 @@ console.log ("");
 // взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // --написати пошук всіх об'єктів, в який в modules є sass
 // --написати пошук всіх об'єктів, в який в modules є docker
+console.log (`#10 - написати пошук всіх об'єктів`);
+
+let sass = [];
+let docker = [];
+
+coursesArray.forEach(element => {
+    element.modules.forEach (index => {
+        switch (index) {
+            case "sass": sass.push(element); break;
+            case "docker": docker.push(element); break;
+            default:
+            break;
+        }
+    })
+});
+console.log ("sass", sass)
+console.log ("docker", docker);
+console.log ("");
+
+
